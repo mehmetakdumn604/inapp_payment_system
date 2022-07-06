@@ -3,8 +3,8 @@ import 'package:inapp_payment_system/services/payment_service.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({
+class PaymentWidget extends StatelessWidget {
+  const PaymentWidget({
     Key? key,
     this.notAvailableTxt = "This store is not available.",
     required this.productWidget,
