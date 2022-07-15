@@ -1,7 +1,8 @@
 import 'package:flutter/services.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
-class PaymentService {
+
+class InAppPaymentService {
   static Future<void> purchaseProduct(String productId) async {
     try {
       PurchaserInfo purchaserInfo = await Purchases.purchaseProduct(productId);

@@ -19,7 +19,7 @@ class PaymentWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder<bool>(
-        future: PaymentService.isConfigured(),
+        future: InAppPaymentService.isConfigured(),
         builder: (context, isConfigured) {
           if (!isConfigured.hasData) {
             return const Center(
@@ -38,7 +38,7 @@ class PaymentWidget extends StatelessWidget {
             );
           }
           return FutureBuilder<Offerings>(
-              future: PaymentService.getOfferings(),
+              future: InAppPaymentService.getOfferings(),
               builder: (context, offeringsSnapshot) {
                 if (!offeringsSnapshot.hasData) {
                   return const Center(
